@@ -1,12 +1,16 @@
 const clouds = document.querySelector(".clouds");
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
+const numb = document.querySelector(".numb");
+let counter = 1;
 
 const jump = () => {
 	mario.classList.add("jump");
 	setTimeout(() => {
 		mario.classList.remove("jump");
+		counter++;
 	}, 500);
+	numb.innerHTML = counter;
 };
 
 const loop = setInterval(() => {
